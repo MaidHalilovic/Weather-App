@@ -24,7 +24,7 @@ const HomePage = () => {
     fetchWeather();
   }, []);
 
-  return <div>HomePage</div>;
+  return <div></div>;
 };
 
 export default HomePage;
