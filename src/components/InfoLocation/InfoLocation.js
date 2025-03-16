@@ -11,7 +11,6 @@ const InfoLocation = () => {
         `https://api.openweathermap.org/data/2.5/weather?q=Novi%20Pazar&appid=eb207edcde405e184e80a692d027226b&units=metric`
       );
 
-      console.log(data.weather);
       console.log(data.main);
 
       setWeather(data.weather);
@@ -31,7 +30,9 @@ const InfoLocation = () => {
   return (
     <div className='main-container'>
       <div className='weather'>
-        <h1>{weather.main.temp}</h1>
+        {/* {weather.map((el, index) => {
+          <div className='card' key={index}> */}
+        <h1>Temp -{weather.temp}</h1>
       </div>
     </div>
   );
