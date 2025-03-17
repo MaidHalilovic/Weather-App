@@ -11,9 +11,10 @@ const InfoLocation = () => {
         `https://api.openweathermap.org/data/2.5/weather?q=Novi%20Pazar&appid=eb207edcde405e184e80a692d027226b&units=metric`
       );
 
-      console.log(data.main);
+      console.log(data);
+      console.log(data.weather);
 
-      setWeather(data.weather);
+      setWeather(data);
     } catch (error) {
       console.error("error while fething weather", error);
     }
@@ -29,10 +30,17 @@ const InfoLocation = () => {
 
   return (
     <div className='main-container'>
+      <div className='location'>
+        <h1>{weather.name}</h1>
+        <div className='weather-main'>
+          <h1>{weather.main.temp}C°</h1>
+          <h1>{weather.weather[0].description}</h1>
+        </div>
+      </div>
       <div className='weather'>
-        {/* {weather.map((el, index) => {
-          <div className='card' key={index}> */}
-        <h1>Temp -{weather.temp}</h1>
+        <h1>{weather.weather[0].main}</h1>
+        <h1>{weather.main.temp_min}C°</h1>
+        <h1>{weather.main.temp_max}C°</h1>
       </div>
     </div>
   );
