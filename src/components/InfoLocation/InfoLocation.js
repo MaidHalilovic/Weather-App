@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./infoLocation.css";
 import axios from "axios";
+import AirQuality from "../airQuality/AirQuality";
 
 const InfoLocation = () => {
   const [weather, setWeather] = useState(undefined);
@@ -34,13 +35,16 @@ const InfoLocation = () => {
         <h1>{weather.name}</h1>
         <div className='weather-main'>
           <h1>{weather.main.temp}C°</h1>
-          <h1>{weather.weather[0].description}</h1>
+          <h3>{weather.weather[0].description}</h3>
         </div>
       </div>
       <div className='weather'>
         <h1>{weather.weather[0].main}</h1>
         <h1>{weather.main.temp_min}C°</h1>
         <h1>{weather.main.temp_max}C°</h1>
+        <div className='airQuality'>
+          <AirQuality />
+        </div>
       </div>
     </div>
   );
