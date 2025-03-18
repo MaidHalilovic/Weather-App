@@ -1,15 +1,42 @@
-.main-container {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.montserrat {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 350px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+  margin-left: 250px;
+  margin-right: 250px;
+  height: 350px;
+  margin-top: 40px;
+  border-radius: 10px;
 }
+
 .weather-main {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-/* .weather-main h1 {
-    color: yellow;
-    } */
+.weather-main h2 {
+  color: #ffc801;
+  font-size: 45px;
+}
+.location h1 {
+  color: #ff006b;
+}
+.weather h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.airQuality {
+  color: #d9d9d9;
+}

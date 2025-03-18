@@ -1,14 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
+import { MantineProvider } from "@mantine/core";
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-        </Routes>
+        <MantineProvider>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+          </Routes>
+        </MantineProvider>
       </BrowserRouter>
     </div>
   );

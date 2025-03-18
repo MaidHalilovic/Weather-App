@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./infoLocation.css";
 import axios from "axios";
 import AirQuality from "../airQuality/AirQuality";
+import { Loader } from "@mantine/core";
 
 const InfoLocation = () => {
   const [weather, setWeather] = useState(undefined);
@@ -26,15 +27,16 @@ const InfoLocation = () => {
   }, []);
 
   if (!weather) {
-    return <h1>Loading....</h1>;
+    return <div></div>
+    <Loader color='blue' type='dots' />;
   }
 
-  return (
-    <div className='main-container'>
+  return weather ? (
+    <div className='montserrat'>
       <div className='location'>
         <h1>{weather.name}</h1>
         <div className='weather-main'>
-          <h1>{weather.main.temp}C°</h1>
+          <h2>{weather.main.temp}C°</h2>
           <h3>{weather.weather[0].description}</h3>
         </div>
       </div>
@@ -47,6 +49,8 @@ const InfoLocation = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <Loader color='blue' type='dots' />
   );
 };
 
