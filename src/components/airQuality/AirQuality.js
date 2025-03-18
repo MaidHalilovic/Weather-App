@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Loader } from "@mantine/core";
 
 const AirQuality = () => {
   const [airQuality, setAirQuality] = useState(undefined);
@@ -21,7 +22,7 @@ const AirQuality = () => {
   }, []);
 
   if (!airQuality) {
-    return <h1>Loading...</h1>;
+    return <Loader color='blue' />;
   }
 
   return (

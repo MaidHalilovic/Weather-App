@@ -5,7 +5,7 @@ import AirQuality from "../airQuality/AirQuality";
 import { Loader } from "@mantine/core";
 
 const InfoLocation = () => {
-  const [weather, setWeather] = useState(undefined);
+  const [weather, setWeather] = useState(null);
 
   const fetchWeather = async () => {
     try {
@@ -27,11 +27,10 @@ const InfoLocation = () => {
   }, []);
 
   if (!weather) {
-    return <div></div>
-    <Loader color='blue' type='dots' />;
+    return <h1>loading...</h1>;
   }
 
-  return weather ? (
+  return (
     <div className='montserrat'>
       <div className='location'>
         <h1>{weather.name}</h1>
@@ -40,17 +39,18 @@ const InfoLocation = () => {
           <h3>{weather.weather[0].description}</h3>
         </div>
       </div>
-      <div className='weather'>
-        <h1>{weather.weather[0].main}</h1>
-        <h1>{weather.main.temp_min}C°</h1>
-        <h1>{weather.main.temp_max}C°</h1>
+      <div className='container'>
+        <div className='weather'>
+          <h1>{weather.weather[0].main}</h1>
+          <h1>{weather.main.temp_min}C°</h1>
+
+          <h1>{weather.main.temp_max}C°</h1>
+        </div>
         <div className='airQuality'>
           <AirQuality />
         </div>
       </div>
     </div>
-  ) : (
-    <Loader color='blue' type='dots' />
   );
 };
 

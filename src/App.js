@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <MantineProvider>
+        <MantineProvider withGlobalStyles withNormalizeCSS>
           <Routes>
             <Route path='/' element={<HomePage />} />
           </Routes>
