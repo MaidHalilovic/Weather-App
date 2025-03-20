@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./infoLocation.css";
 import axios from "axios";
 import AirQuality from "../airQuality/AirQuality";
+
 import { Loader } from "@mantine/core";
 
 const InfoLocation = () => {
