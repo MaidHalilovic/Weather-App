@@ -40,7 +40,7 @@ const InfoLocation = () => {
           <h3>{weather.weather[0].description}</h3>
         </div>
       </div>
-      <div className='container'>
+      <div className='weatherContainer'>
         <div className='weather'>
           <h1>{weather.weather[0].main}</h1>
           <h1>{weather.main.temp_min}C°</h1>
