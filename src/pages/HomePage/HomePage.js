@@ -5,9 +5,13 @@ import WeatherDetalis from "../../components/weatherDetalis/WeatherDetalis";
 
 const HomePage = () => {
   return (
-    <div>
-      <InfoLocation />
-      <WeatherDetalis />
+    <div className='main-container'>
+      <div className='firstDiv'>
+        <InfoLocation />
+      </div>
+      <div className='secondDiv'>
+        <WeatherDetalis />
+      </div>
     </div>
   );
 };
