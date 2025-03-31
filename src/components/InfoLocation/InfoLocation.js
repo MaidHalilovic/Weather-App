@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./infoLocation.css";
 import axios from "axios";
 import AirQuality from "../airQuality/AirQuality";
+import { FaTemperatureArrowDown } from "react-icons/fa6";
+import { FaTemperatureArrowUp } from "react-icons/fa6";
 
 import { Loader } from "@mantine/core";
 
@@ -14,8 +16,8 @@ const InfoLocation = () => {
         `https://api.openweathermap.org/data/2.5/weather?q=Novi%20Pazar&appid=eb207edcde405e184e80a692d027226b&units=metric`
       );
 
-      console.log(data);
-      console.log(data.weather);
+      // console.log(data);
+      // console.log(data.weather);
 
       setWeather(data);
     } catch (error) {
@@ -43,9 +45,15 @@ const InfoLocation = () => {
       <div className='weatherContainer'>
         <div className='weather'>
           <h1>{weather.weather[0].main}</h1>
-          <h1>{weather.main.temp_min}C°</h1>
+          <h1 style={{ gap: 10, marginLeft: 80 }}>
+            {weather.main.temp_min}C°
+            <FaTemperatureArrowDown style={{ color: "6D97CA" }} />
+          </h1>
 
-          <h1>{weather.main.temp_max}C°</h1>
+          <h1 style={{ gap: 10 }}>
+            {weather.main.temp_max}C°{" "}
+            <FaTemperatureArrowUp style={{ color: "DFA1A1" }} />
+          </h1>
         </div>
         <div className='airQuality'>
           <AirQuality />

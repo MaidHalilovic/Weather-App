@@ -12,6 +12,7 @@
   box-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
   padding: 20px;
   border-radius: 10px;
+  height: 350px;
 }
 .temp {
   display: grid;

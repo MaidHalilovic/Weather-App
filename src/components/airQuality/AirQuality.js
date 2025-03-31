@@ -10,7 +10,7 @@ const AirQuality = () => {
       const { data } =
         await axios.get(`https://api.openweathermap.org/data/2.5/air_pollution?lat=43.1367&lon=20.5122&appid=eb207edcde405e184e80a692d027226b
 `);
-      console.log(data);
+      // console.log(data);
       setAirQuality(data);
     } catch (error) {
       console.error("Erorr while fetching airQuality", error);
@@ -27,7 +27,7 @@ const AirQuality = () => {
 
   return (
     <div className='airquality'>
-      <h1>
+      <h1 style={{ gap: 20 }}>
         Air Quality:
         {airQuality.list[0].main.aqi}
       </h1>
