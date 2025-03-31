@@ -6,13 +6,13 @@ import { MantineProvider } from "@mantine/core";
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter>
-        <MantineProvider withGlobalStyles withNormalizeCSS>
+      <MantineProvider>
+        <BrowserRouter>
           <Routes>
             <Route path='/' element={<HomePage />} />
           </Routes>
-        </MantineProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </MantineProvider>
     </div>
   );
 }

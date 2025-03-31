@@ -22,7 +22,7 @@ const WeatherDetalis = () => {
   }, []);
 
   if (!weatherDetalis) {
-    return <h1>Loading...</h1>;
+    return <h1></h1>;
   }
 
   return (
@@ -48,7 +48,7 @@ const WeatherDetalis = () => {
           </div>
           <div className='card'>
             <h3>Clouds</h3>
-            <h1>{weatherDetalis.clouds.all}</h1>
+            <h1>{weatherDetalis.clouds.all}%</h1>
           </div>
           <div className='card'>
             <h3>Visibility</h3>

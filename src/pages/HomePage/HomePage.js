@@ -2,6 +2,7 @@ import React from "react";
 import "./homePage.css";
 import InfoLocation from "../../components/InfoLocation/InfoLocation";
 import WeatherDetalis from "../../components/weatherDetalis/WeatherDetalis";
+import WeatherForeCast from "../../components/weatherForeCast/WeatherForeCast";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       </div>
       <div className='secondDiv'>
         <WeatherDetalis />
+        <WeatherForeCast />
       </div>
     </div>
   );

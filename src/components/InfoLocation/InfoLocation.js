@@ -28,7 +28,7 @@ const InfoLocation = () => {
   }, []);
 
   if (!weather) {
-    return <h1>loading...</h1>;
+    return <Loader color='blue' type='dots' />;
   }
 
   return (
