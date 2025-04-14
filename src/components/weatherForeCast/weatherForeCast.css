@@ -2,6 +2,9 @@
   margin-left: 110px;
   margin-top: 50px;
 }
+.forecast h1 {
+  margin-left: 140px;
+}
 .weathertoday {
   display: flex;
   justify-content: center;
@@ -17,11 +20,27 @@
   margin-left: 150px;
 }
 .weathertoday h4 {
-  display: flex;
-  flex-direction: row;
-  margin-right: 200px;
+  margin: 2px 0;
+  font-size: 22px;
 }
-.weathertoday h3 {
-  margin-top: 1px;
-  margin-left: 300px;
+
+.txt {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  align-items: start;
+  gap: 120px;
+}
+.txt h3 {
+  color: #ffc801;
+}
+
+.weatherNow {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  color: #ff006b;
 }
