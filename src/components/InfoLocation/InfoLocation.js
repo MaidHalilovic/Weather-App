@@ -16,9 +16,6 @@ const InfoLocation = () => {
         `https://api.openweathermap.org/data/2.5/weather?q=Novi%20Pazar&appid=eb207edcde405e184e80a692d027226b&units=metric`
       );
 
-      // console.log(data);
-      // console.log(data.weather);
-
       setWeather(data);
     } catch (error) {
       console.error("error while fething weather", error);
