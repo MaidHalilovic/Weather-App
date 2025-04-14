@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import "./weatherForeCast.css";
 
 const WeatherForeCast = () => {
   const [forecast, setForeCast] = useState(null);
@@ -27,9 +28,9 @@ const WeatherForeCast = () => {
 
   return (
     <div className='forecast'>
-      <h1>Today’s Weather Forecast...</h1>
+      <h1>Today’s Weather Forecast</h1>
       <div className='weathertoday'>
-        <h1>{forecast.list[0].dt_txt}</h1>
+        {/* <h1>{forecast.list[0].dt_txt}</h1> */}
       </div>
     </div>
   );

@@ -7,4 +7,5 @@
 .secondDiv {
   display: flex;
   flex-direction: row;
+  /* gap: 400px; */
 }

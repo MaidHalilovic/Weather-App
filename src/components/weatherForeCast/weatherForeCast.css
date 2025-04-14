@@ -1,1 +1,17 @@
-
+.forecast {
+  margin-left: 110px;
+  margin-top: 50px;
+  width: 1000px;
+}
+.weathertoday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin-top: 100px;
+  border: 1px solid gray;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+  padding: 20px;
+  border-radius: 10px;
+  height: 350px;
+}
