@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./weatherForeCast5day.css";
 import axios from "axios";
 
-const weatherForeCast5day = () => {
+const WeatherForeCast5day = () => {
   const [foreCast5day, setForeCast5day] = useState(null);
 
   const fetchForecast5day = async () => {
@@ -21,7 +21,21 @@ const weatherForeCast5day = () => {
     fetchForecast5day();
   }, []);
 
-  return <div>weatherForeCast5day</div>;
+  const getDayName = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", { weekday: "long" });
+  };
+
+  return (
+    <div className='foreCast5day'>
+      <div>
+        <h4>{getDayName(foreCast5day.list[0].dt_txt)}</h4>
+        <h4>{getDayName(foreCast5day.list[13].dt_txt)}</h4>
+        <h4>{getDayName(foreCast5day.list[21].dt_txt)}</h4>
+        <h4>{getDayName(foreCast5day.list[29].dt_txt)}</h4>
+      </div>
+    </div>
+  );
 };
 
-export default weatherForeCast5day;
+export default WeatherForeCast5day;
