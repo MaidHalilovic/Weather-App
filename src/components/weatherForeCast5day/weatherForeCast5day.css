@@ -1,4 +1,9 @@
-.foreCast5day {
+.foreCast5day h1 {
+  position: relative;
+  bottom: 20px;
+  margin-left: 110px;
+}
+.weatherForeCast {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,4 +14,34 @@
   border-radius: 10px;
   height: 350px;
   margin-left: 110px;
+  flex-direction: column;
+}
+.fiveDays {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 28px;
+  /* margin-top: 120px; */
+  color: #ff006b;
+  position: relative;
+}
+
+.weatherForeCast5days {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  gap: 70px;
+  position: relative;
+  bottom: 40px;
+  color: rgb(172, 172, 172);
+}
+.tempFor5days {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-size: 26px;
+  color: #ffc801;
 }
