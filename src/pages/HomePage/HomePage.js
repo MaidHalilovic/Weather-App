@@ -12,11 +12,11 @@ const HomePage = () => {
         <InfoLocation />
       </div>
       <div className='secondDiv'>
-        <WeatherDetalis />
+        <div className='thirdDiv'>
+          <WeatherDetalis />
+          <WeatherForeCast5day />
+        </div>
         <WeatherForeCast />
-      </div>
-      <div>
-        <WeatherForeCast5day />
       </div>
     </div>
   );

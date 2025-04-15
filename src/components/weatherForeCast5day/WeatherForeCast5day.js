@@ -21,19 +21,33 @@ const WeatherForeCast5day = () => {
     fetchForecast5day();
   }, []);
 
-  const getDayName = (dateString) => {
-    const date = new Date(dateString);
+  const getDayName = (string) => {
+    const date = new Date(string);
     return date.toLocaleDateString("en-US", { weekday: "long" });
   };
 
+  if (!foreCast5day) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div className='foreCast5day'>
-      <div>
-        <h4>{getDayName(foreCast5day.list[0].dt_txt)}</h4>
+      <h1>5-day weather forecast</h1>
+      <div className='fiveDays'>
+        <h4>{getDayName(foreCast5day.list[5].dt_txt)}</h4>
         <h4>{getDayName(foreCast5day.list[13].dt_txt)}</h4>
         <h4>{getDayName(foreCast5day.list[21].dt_txt)}</h4>
         <h4>{getDayName(foreCast5day.list[29].dt_txt)}</h4>
+        <h4>{getDayName(foreCast5day.list[37].dt_txt)}</h4>
       </div>
+      <div className='tempFor5days'>
+        <h4>{foreCast5day.list[0].main.temp}C°</h4>
+        <h4>{foreCast5day.list[13].main.temp}C°</h4>
+        <h4>{foreCast5day.list[21].main.temp}C°</h4>
+        <h4>{foreCast5day.list[29].main.temp}C°</h4>
+        <h4>{foreCast5day.list[37].main.temp}C°</h4>
+      </div>
+      {/* <div className=''></div> */}
     </div>
   );
 };
