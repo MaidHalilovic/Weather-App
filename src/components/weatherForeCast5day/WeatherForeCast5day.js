@@ -34,19 +34,14 @@ const WeatherForeCast5day = () => {
     <div className='foreCast5day'>
       <h1>5-day weather forecast</h1>
       <div className='weatherForeCast'>
-        <div className='fiveDays'>
-          <h4>{getDayName(foreCast5day.list[5].dt_txt)}</h4>
-          <h4>{getDayName(foreCast5day.list[13].dt_txt)}</h4>
-          <h4>{getDayName(foreCast5day.list[21].dt_txt)}</h4>
-          <h4>{getDayName(foreCast5day.list[29].dt_txt)}</h4>
-          <h4>{getDayName(foreCast5day.list[37].dt_txt)}</h4>
-        </div>
-        <div className='weatherForeCast5days'>
-          <h4>{foreCast5day.list[5].weather[0].main}</h4>
-          <h4>{foreCast5day.list[13].weather[0].main}</h4>
-          <h4>{foreCast5day.list[21].weather[0].main}</h4>
-          <h4>{foreCast5day.list[29].weather[0].main}</h4>
-          <h4>{foreCast5day.list[37].weather[0].main}</h4>
+        <div className='fiveDaysTemp'>
+          <div className='fiveDays'>
+            <h4>{getDayName(foreCast5day.list[5].dt_txt)}</h4>
+            <h4>{getDayName(foreCast5day.list[13].dt_txt)}</h4>
+            <h4>{getDayName(foreCast5day.list[21].dt_txt)}</h4>
+            <h4>{getDayName(foreCast5day.list[29].dt_txt)}</h4>
+            <h4>{getDayName(foreCast5day.list[37].dt_txt)}</h4>
+          </div>
         </div>
         <div className='tempFor5days'>
           <h4>{foreCast5day.list[0].main.temp}C°</h4>
@@ -54,6 +49,13 @@ const WeatherForeCast5day = () => {
           <h4>{foreCast5day.list[21].main.temp}C°</h4>
           <h4>{foreCast5day.list[29].main.temp}C°</h4>
           <h4>{foreCast5day.list[37].main.temp}C°</h4>
+        </div>
+        <div className='weatherForeCast5days'>
+          <h4>{foreCast5day.list[5].weather[0].main}</h4>
+          <h4>{foreCast5day.list[13].weather[0].main}</h4>
+          <h4>{foreCast5day.list[21].weather[0].main}</h4>
+          <h4>{foreCast5day.list[29].weather[0].main}</h4>
+          <h4>{foreCast5day.list[37].weather[0].main}</h4>
         </div>
       </div>
     </div>

@@ -18,23 +18,27 @@
 }
 .fiveDays {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   gap: 20px;
   font-size: 28px;
   /* margin-top: 120px; */
   color: #ff006b;
-  position: relative;
+}
+.fiveDaysTemp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .weatherForeCast5days {
   display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 26px;
   gap: 70px;
   position: relative;
-  bottom: 40px;
+  bottom: 50px;
+  left: 10px;
   color: rgb(172, 172, 172);
 }
 .tempFor5days {
