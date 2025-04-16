@@ -18,11 +18,8 @@
 }
 .fiveDays {
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
   gap: 20px;
   font-size: 28px;
-  /* margin-top: 120px; */
   color: #ff006b;
 }
 .fiveDaysTemp {
