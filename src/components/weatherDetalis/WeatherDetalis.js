@@ -22,7 +22,7 @@ const WeatherDetalis = () => {
   }, []);
 
   if (!weatherDetalis) {
-    return <h1></h1>;
+    return null;
   }
 
   return (
